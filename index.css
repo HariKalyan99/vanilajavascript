@@ -1,0 +1,28 @@
+.container {
+    border: 2px solid black;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+
+.container input {
+    width: 245px;
+    height: 30px;
+}
+
+.container button {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+
+.btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

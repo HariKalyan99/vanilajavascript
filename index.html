@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- <button id="helloButton" onclick="
+    count+=1;
+    document.querySelector('#count').innerText = `the Count value is incremented by 1: ${count}`
+    ">increment</button>
+
+    <button class="howButton" onclick="
+    count-=1;
+    document.querySelector('#count').innerText = `the Count value is decrement by 1: ${count}`
+    ">decrement</button>
+    <button class="howButton" onclick="
+    count+=2;
+    document.querySelector('#count').innerText = `the Count value is incremented by 2: ${count}`
+    ">add + 2</button> -->
+
+
+    <!-- <h1 id="count"></h1> -->
+
+    <!-- <div class="container">
+        <div class="inp">
+            <input type="text" id="inp" readonly >
+        </div> -->
+        <!-- <div class="btn">
+        <button onclick="
+        displayCal = '';
+            document.querySelector('#inp').value = displayCal;
+            ">C</button>
+        <button onclick="
+        displayCal = displayCal + 1;
+            document.querySelector('#inp').value = displayCal;
+            ">1</button>
+        <button onclick="
+        displayCal = displayCal + 2;
+            document.querySelector('#inp').value = displayCal;
+            ">2</button>
+        <button onclick="
+        displayCal = displayCal + '+';
+            document.querySelector('#inp').value = displayCal;
+            ">+</button>
+        <button onclick="
+        displayCal = displayCal + 3;
+            document.querySelector('#inp').value = displayCal;
+            ">3</button>
+        <button onclick="
+        displayCal = displayCal + 4;
+            document.querySelector('#inp').value = displayCal;
+            ">4</button>
+        <button onclick="
+        displayCal = displayCal + '-';
+            document.querySelector('#inp').value = displayCal;
+            ">-</button>
+        <button onclick="
+        displayCal = displayCal + 5;
+            document.querySelector('#inp').value = displayCal;
+            ">5</button>
+        <button onclick="
+        displayCal = displayCal + 6;
+            document.querySelector('#inp').value = displayCal;
+            ">6</button>
+        <button onclick="
+        displayCal = displayCal + '*';
+            document.querySelector('#inp').value = displayCal;
+            ">*</button>
+        <button onclick="
+        displayCal = displayCal + 7;
+            document.querySelector('#inp').value = displayCal;
+            ">7</button>
+        <button onclick="
+        displayCal = displayCal + 8;
+            document.querySelector('#inp').value = displayCal;
+            ">8</button>
+        <button onclick="
+        displayCal = displayCal + '/';
+            document.querySelector('#inp').value = displayCal;
+            ">/</button>
+        <button onclick="
+        document.querySelector('#inp').value = eval(displayCal);
+        ">=</button>
+        <button onclick="
+        displayCal = displayCal + 9;
+            document.querySelector('#inp').value = displayCal;
+            ">9</button>
+        <button onclick="
+        displayCal = displayCal + 0;
+            document.querySelector('#inp').value = displayCal;
+            ">0</button>
+        <button onclick="displayOnScreen(displayCal)">.</button> -->
+       <!-- </div>
+    </div> -->
+
+    <div>
+        <button id="btn">Click me</button>
+        <input type="text" id="inp">
+        <h1 id="display"></h1>
+    </div>
+
+    <script>
+        // let displayCal = "";
+        // document.querySelector("#inp").value = displayCal;
+
+
+        const btnEle = document.getElementById("btn");
+        const inpEle = document.querySelector("#inp");
+        const h1Ele = document.querySelector("#display");
+
+        console.log(btnEle, inpEle, h1Ele);
+
+        
+
+
+
+        // let age = 20;
+        // if(age > 10){
+        //     age = 30;
+        //     console.log(age)
+        // }else if(age == 30){
+        //     console.log("age is ", age);
+        // }
+
+        // function displayOnScreen(val) {
+        //     const res = eval(val);
+        //     document.getElementById("count").innerText = `${res}`;
+        // }
+
+    </script>
+</body>
+</html>

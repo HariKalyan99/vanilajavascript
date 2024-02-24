@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+        .btn-style {
+            height: 100px;
+            width: 100px;
+            border: none;
+            border-radius: 5px;
+            font-size: 5rem;
+        }
+        .js-btn-odd {
+            background-color: aqua;
+        }
+        .js-btn-even {
+            background-color: rgb(157, 255, 0);
+        }
+        .con-color {
+            background-color: rgb(214, 186, 26);
+        } 
+        .con2-color {
+            background-color: rgb(255, 255, 255);
+        } 
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Calculator History</h1>
+
+    <div class="container">
+      <div class="inp">
+        <input type="text" id="inp" readonly />
+      </div>
+      <div class="btn">
+        <button
+          onclick="
+          calculator('C');
+            "
+        >
+          C
+        </button>
+        <button
+          onclick="
+        calculator('1');
+            "
+        >
+          1
+        </button>
+        <button
+          onclick="
+        calculator('2');
+            "
+        >
+          2
+        </button>
+        <button
+          onclick="
+        calculator('+');
+            "
+        >
+          +
+        </button>
+        <button
+          onclick="
+        calculator('3');
+            "
+        >
+          3
+        </button>
+        <button
+          onclick="
+        calculator('4');
+            "
+        >
+          4
+        </button>
+        <button
+          onclick="
+       calculator('-');
+            "
+        >
+          -
+        </button>
+        <button
+          onclick="
+        calculator('5');
+            "
+        >
+          5
+        </button>
+        <button
+          onclick="
+        calculator('6');
+            "
+        >
+          6
+        </button>
+        <button
+          onclick="
+        calculator('*');
+            "
+        >
+          *
+        </button>
+        <button
+          onclick="
+        calculator('7');
+            "
+        >
+          7
+        </button>
+        <button
+          onclick="
+        calculator('8');
+            "
+        >
+          8
+        </button>
+        <button
+          onclick="
+        calculator('/');
+            "
+        >
+          /
+        </button>
+        <button
+          onclick="
+        calculator('=');
+        "
+        >
+          =
+        </button>
+        <button
+          onclick="
+        calculator('9');
+            "
+        >
+          9
+        </button>
+        <button
+          onclick="
+       calculator('0');
+            "
+        >
+          0
+        </button>
+        <button onclick="resetLocalStorage()">Reset</button>
+        <button onclick="showPrevious()" style="width: 100px;">Show previous</button>
+      </div>
+    </div> -->
+
+
+
+    <div id="btn-conatiner" style="height: 200px; width: 300px; border: 1px solid black; display: flex; justify-content: center; align-items: center;">
+        
+    </div>
+    
+    <script>
+        
+        
+        document.querySelector("#btn-conatiner").innerHTML = `<button id="counterBtn" class="btn-style" onclick="buttonPressed();"></button>`;
+        
+        let btnVal = localStorage.getItem("button-value") || 0;
+
+   function buttonPressed() {
+       btnVal++;
+       localStorage.setItem("button-value", btnVal);
+       updateBtn();
+}
+
+function updateBtn() {
+    let btn = document.querySelector("#counterBtn");
+    if(btnVal%2 == 0){
+        btn.classList.add("js-btn-even");
+        btn.classList.remove("js-btn-odd");
+    }else{
+        btn.classList.add("js-btn-odd");
+        btn.classList.remove("js-btn-even");
+    }
+    btn.innerText = btnVal;
+    if(btnVal%10 == 0){
+    document.querySelector("#btn-conatiner").classList.add("con-color");
+    document.querySelector("#btn-conatiner").classList.remove("con2-color");
+}else{
+    document.querySelector("#btn-conatiner").classList.add("con2-color");
+    document.querySelector("#btn-conatiner").classList.remove("con-color");
+}
+}
+
+
+// let num = 1;
+
+// do{
+//     console.log(num, "runs once or guarantees one iteration");
+//     num++;
+// } while(false);
+
+updateBtn();
+
+
+
+
+
+
+
+
+    //     let displayValue = "";
+    //     function calculator(val) {
+    //         if(val !== "=" && val !== "C"){
+    //         displayValue = displayValue + val;
+    //     }else if(val === "="){
+    //         localStorage.setItem("calculatorExpression", displayValue);
+    //         displayValue = eval(displayValue);
+    //         localStorage.setItem("calculatedValue", displayValue);
+    //     }else if(val === "C"){
+    //         displayValue = "";
+    //     }
+    //     document.getElementById("inp").value = displayValue;
+    // }
+
+    // function showPrevious(){
+    //     alert(`${localStorage.getItem("calculatorExpression")} = ${localStorage.getItem("calculatedValue")}`)
+    // }
+
+    // function resetLocalStorage(){
+    //     localStorage.clear();
+    // }
+
+
+    // let myDate = new Date();
+    // console.log(myDate.getDate())
+    // console.log(myDate.getDay())
+    // console.log(myDate.getFullYear())
+    // console.log(myDate.getHours())
+    // console.log(myDate.getMilliseconds())
+    // console.log(myDate.getMinutes())
+    // console.log(myDate.getMonth());
+    // console.log(myDate.getTime())
+
+    
+    </script>
+  </body>
+</html>
